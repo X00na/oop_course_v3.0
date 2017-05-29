@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="layout" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="425.0" prefWidth="790.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.coursework.controller.AdminController">
+   <children>
+      <MenuBar fx:id="menu">
+        <menus>
+          <Menu mnemonicParsing="false" text="Товары">
+               <items>
+                  <MenuItem fx:id="product" mnemonicParsing="false" text="Просмотреть товары" />
+               </items></Menu>
+          <Menu mnemonicParsing="false" text="Типы товаров">
+               <items>
+                  <MenuItem fx:id="type" mnemonicParsing="false" text="Просмотреть типы товаров" />
+               </items></Menu>
+          <Menu mnemonicParsing="false" text="Заказы">
+               <items>
+                  <MenuItem fx:id="order" mnemonicParsing="false" text="Просмотреть заказы" />
+               </items></Menu>
+            <Menu mnemonicParsing="false" text="Статистика">
+              <items>
+                <MenuItem fx:id="circle" mnemonicParsing="false" text="Круговая диаграмма" />
+                  <MenuItem fx:id="bar" mnemonicParsing="false" text="Столбчатая диаграмма" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</VBox>

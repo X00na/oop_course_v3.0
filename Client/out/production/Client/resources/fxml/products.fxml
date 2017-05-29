@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="layout" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="790.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.coursework.controller.ProductController">
+   <children>
+      <TableView fx:id="table" prefHeight="380.0" prefWidth="790.0">
+        <columns>
+          <TableColumn fx:id="idCol" prefWidth="43.0" text="Код" />
+          <TableColumn fx:id="nameCol" prefWidth="126.0" text="Название" />
+            <TableColumn fx:id="infoCol" prefWidth="139.0" text="Информация" />
+            <TableColumn fx:id="countCol" prefWidth="100.0" text="Количество, шт" />
+            <TableColumn fx:id="priceCol" prefWidth="67.0" text="Цена, руб" />
+            <TableColumn fx:id="dateCol" prefWidth="133.0" text="Дата создания" />
+            <TableColumn fx:id="typeCol" prefWidth="181.0" text="Тип товара" />
+        </columns>
+      </TableView>
+      <HBox prefHeight="209.0" prefWidth="790.0" spacing="10.0">
+         <children>
+            <VBox prefHeight="119.0" prefWidth="242.0" spacing="5.0">
+               <children>
+                  <HBox prefHeight="31.0" prefWidth="271.0">
+                     <children>
+                        <Label prefHeight="31.0" prefWidth="64.0" text="Название" />
+                        <Pane prefHeight="31.0" prefWidth="41.0" />
+                        <TextField fx:id="newName" prefHeight="31.0" prefWidth="155.0" promptText="Название товара" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="31.0" prefWidth="271.0">
+                     <children>
+                        <Label prefHeight="36.0" prefWidth="73.0" text="Информация" />
+                        <Pane prefHeight="31.0" prefWidth="18.0" />
+                        <TextField fx:id="newInfo" prefHeight="44.0" prefWidth="149.0" promptText="Информация о нём" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="31.0" prefWidth="271.0">
+                     <children>
+                        <Label prefHeight="31.0" prefWidth="73.0" text="Количество" />
+                        <Pane prefHeight="31.0" prefWidth="30.0" />
+                        <TextField fx:id="newCount" prefHeight="31.0" prefWidth="156.0" promptText="Количество в наличии" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="115.0" prefWidth="240.0" spacing="5.0">
+               <children>
+                  <HBox prefHeight="31.0" prefWidth="240.0">
+                     <children>
+                        <Label prefHeight="31.0" prefWidth="35.0" text="Цена" />
+                        <Pane prefHeight="31.0" prefWidth="46.0" />
+                        <TextField fx:id="newPrice" prefHeight="31.0" prefWidth="169.0" promptText="Цена товара" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="31.0" prefWidth="240.0">
+                     <children>
+                        <Label prefHeight="31.0" prefWidth="75.0" text="Тип товара" />
+                        <Pane prefHeight="31.0" prefWidth="4.0" />
+                        <ChoiceBox fx:id="newType" prefHeight="31.0" prefWidth="168.0" />
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="31.0" prefWidth="240.0">
+                     <children>
+                        <Button fx:id="add" mnemonicParsing="false" prefHeight="58.0" prefWidth="69.0" text="Добавить" />
+                        <Pane prefHeight="31.0" prefWidth="108.0" />
+                        <Button fx:id="delete" mnemonicParsing="false" prefHeight="42.0" prefWidth="60.0" text="Удалить" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+            <VBox prefHeight="108.0" prefWidth="255.0" spacing="2.0">
+               <children>
+                  <Label text="Поиск:">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <HBox prefHeight="29.0" prefWidth="283.0" spacing="10.0">
+                     <children>
+                        <Label prefHeight="25.0" prefWidth="59.0" text="Найти по:" />
+                        <ChoiceBox fx:id="choice" prefHeight="25.0" prefWidth="191.0" />
+                     </children>
+                  </HBox>
+                  <TextField fx:id="search" promptText="Значение" />
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="find" mnemonicParsing="false" text="Найти!" />
+                        <Pane prefHeight="25.0" prefWidth="33.0" />
+                        <Button fx:id="reset" mnemonicParsing="false" text="Сбросить поиск" />
+                        <Separator orientation="VERTICAL" prefHeight="25.0" prefWidth="14.0" />
+                        <Button fx:id="report" mnemonicParsing="false" text="Отчёт" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>
